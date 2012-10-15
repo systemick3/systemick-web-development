@@ -1,0 +1,163 @@
+<?php
+
+/**
+* @file
+* Provides a CCK field with a question and an answer.
+*/
+
+
+function question_answer_field_init() {
+  //die('Here');
+}
+
+
+/**
+  * Implementation of hook_info().
+  */
+function question_answer_field_info() {
+  return array(
+    'question_answer' => array(
+      'label' => t('Question & Answer Field'),
+      'description' => t('A field for a question and answer.'),
+      'default_widget' => 'question_answer_combined',
+      'default_formatter' => 'question_answer_default',
+    ),
+  );
+               
+}
+
+/**
+* Implements hook_field_schema().
+*/
+function question_answer_field_schema($field) {
+  if($field['type'] == 'question_answer') {
+    $columns = array(
+      'question' => array('type' => 'varchar', 'length' => 255, 'not null' => FALSE),
+      'answer' => array('type' => 'varchar', 'length' => 255, 'not null' => FALSE),
+    );
+    $indexes = array(
+      'question' => array('question'),
+      'answer' => array('answer'),
+    );
+    return array(
+      'columns' => $columns,
+      'indexes' => $indexes,
+    );
+  }
+}
+
+/**
+* Implements hook_field_is_empty().
+*/
+function question_answer_field_is_empty($item, $field) {
+  if($field['type'] == 'question_answer') {
+    if(empty($item['question']) || empty($item['answer']))  {
+      return TRUE;
+    }
+    return FALSE;
+  }
+}
+
+/**
+* Implements hook_field_validate().
+*/
+function question_answer_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
+  if($field['type'] == 'question_answer') {
+    foreach($items as $delta => $item) {
+      if(!empty($item['question'])) {
+        if($item['question'] == 'Testing') {
+          $errors[$field['field_name']][$langcode][$delta][] = array(
+            'error' => 'question_invalid',
+            'message' => t('Invalid question.'),
+          );
+        }
+        
+        if($item['answer'] == 'Testing') {
+          $errors[$field['field_name']][$langcode][$delta][] = array(
+            'error' => 'answer_invalid',
+            'message' => t('Invalid answer.'),
+          );
+        }
+      }
+    }
+  }
+}
+
+/**
+* Implements hook_field_formatter_info().
+*/
+function question_answer_field_formatter_info() {
+  return array(
+    'question_answer_question_text' => array(
+      'label' => t('Simple text-based formatter'),
+      'field types' => array('question_answer'),
+    ),
+  );
+}
+
+/**
+* Implements hook_field_formatter_view().
+*/
+function color_example_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  
+  if($display['type'] == 'question_answer_question_text') {
+    foreach ($items as $delta => $item) {
+      $element[$delta]['#markup'] = '<p>Question: ' . $item['question'] . '</p>' . '<p>Answer: ' . $item['answer'] . '</p>'; 
+    }
+  }
+}
+
+
+/**
+  * Implementation of hook_widget_info().
+  */
+function question_answer_field_widget_info() {
+  return array(
+    'question_answer_simple' => array(
+      'label' => t('Separate text fields'),
+      'description' => t('Allow user to put question and answer into separate text boxes'),
+      'field types' => array('question_answer'),
+      'settings' => array('size' => 10),
+      'behaviours' => array(
+        'multiple values' => FIELD_BEHAVIOR_DEFAULT,
+        'default value' => FIELD_BEHAVIOR_DEFAULT,
+      )
+    )
+  );
+}
+
+/**
+  * Implementation of hook_widget_form().
+  */
+function question_answer_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  $base = $element;
+  
+  if($instance['widget']['type'] == 'question_answer_simple') {
+    $element['question'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Question'),
+      '#default_value' => isset($items['delta']['question']) ? $items['delta']['question'] : NULL,
+    ) + $base;
+    $element['answer'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Answer'),
+      '#default_value' => isset($items['delta']['answer']) ? $items['delta']['answer'] : NULL,
+    ) + $base;
+  }
+  
+  return $element;
+}
+
+/**
+* Implements hook_field_error().
+*/
+function question_answer_field_widget_error($element, $error, $form, &$form_state) {
+  switch ($error['error']) {
+    case 'question_invalid':
+    case 'answer_invalid':
+      form_error($element, $error['message']);
+      break;
+  }
+}
+
