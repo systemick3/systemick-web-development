@@ -1,0 +1,15 @@
+name = Blog Content Types
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = blog_content_types
+dependencies[] = features
+dependencies[] = field_sql_storage
+dependencies[] = node
+dependencies[] = taxonomy
+dependencies[] = text
+features[features_api][] = api:1
+features[field][] = node-blog-body
+features[field][] = node-blog-field_tags
+features[node][] = blog
+features[taxonomy][] = tags

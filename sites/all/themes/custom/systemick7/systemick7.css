@@ -164,13 +164,13 @@ body.sidebar-second #sidebar-second {
 }
 
 .block-search {
-  padding: 1em;
+  padding: 1em 0 1em 0.25em;
 }
 
 #block-system-main {
   background: #fff;
   border: 0;
-  padding: 0 0 0 1em;
+  padding: 0;
 }
 
 .block ul.menu {
@@ -272,7 +272,7 @@ ul.objectives li {
 
 .field-name-field-slideshow {
   height: 17em;
-  margin: 0 0 1em 0;
+  margin: 0;
 }
 
 .field-name-field-slideshow .field-label {
@@ -379,6 +379,43 @@ ol.search-results li {
 
 .search-results .search-snippet-info {
   padding: 0;
+}
+
+#block-system-main .content {
+  width: 500px;
+}
+
+.view-tweets .views-row {
+  border-bottom: 1px dotted #aaa;
+  padding: 10px 0 10px 0;
+}
+
+input#edit-search-block-form--2  {
+  width: 130px;
+}
+
+.block-aggregator ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0;
+}
+.block-aggregator ul li {
+  background-image: url(/sites/all/themes/custom/systemick7/images/1.gif);
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  padding: 5px 0 5px 20px;
+}
+
+.field-name-field-objectives ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0 0 20px 0;
+}
+.field-name-field-objectives ul li {
+  background-image: url(/sites/all/themes/custom/systemick7/images/2.gif);
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  padding: 0 0 5px 20px;
 }
 
 /*************************/

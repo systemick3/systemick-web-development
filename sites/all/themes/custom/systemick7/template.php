@@ -110,3 +110,12 @@ function systemick7_preprocess_search_block_form(&$vars) {
   //exit;
   $vars['search_form'] = str_replace('type="text"', 'type="search"', $vars['search_form']);
 }
+
+function print_pre($data, $exit = TRUE) {
+  print '<pre>';
+  print_r($data);
+  print '</pre>';
+  if($exit) {
+    exit;
+  }
+}

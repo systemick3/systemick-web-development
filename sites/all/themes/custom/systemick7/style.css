@@ -156,7 +156,7 @@ fieldset { border: 1px solid #ccc; margin: .5em 0; padding: 1em; }
 /* 3 columns */
 body.two-sidebars #main {
   float: left;
-  margin: 0 20px 0 240px;
+  margin: -10px 20px 0 240px;
   padding: 0;
   width: 460px;
 }
@@ -190,8 +190,8 @@ body.two-sidebars #sidebar-first {
 
 /* 3 columns: sidebar-second */
 body.two-sidebars #sidebar-second {
-  float: left;
-  margin: 0;
+  float: right;
+  margin: 270px 0 0 0;
   padding: 0px;
   width: 220px;
 }
@@ -350,6 +350,7 @@ ul.secondary a.active {
   font-size: 2em;
   line-height: 1.5em;
   margin-bottom: 0;
+  width: 600px;
 }
 
 .node {

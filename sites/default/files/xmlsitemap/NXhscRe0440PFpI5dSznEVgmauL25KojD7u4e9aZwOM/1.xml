@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>http://drupal7-systemick.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/articles</loc></url>
-<url><loc>http://drupal7-systemick.com/open-source</loc><lastmod>2011-04-08T11:27Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/consultancy</loc><lastmod>2011-04-07T15:42Z</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/install-drupal</loc><lastmod>2011-03-22T15:52Z</lastmod><changefreq>monthly</changefreq></url>
-<url><loc>http://drupal7-systemick.com/create-drupal-theme</loc><lastmod>2011-03-22T15:54Z</lastmod><changefreq>monthly</changefreq></url>
-<url><loc>http://drupal7-systemick.com/links</loc><lastmod>2011-04-08T10:11Z</lastmod><changefreq>weekly</changefreq></url>
-<url><loc>http://drupal7-systemick.com/front</loc><lastmod>2011-04-08T10:42Z</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/content/installing-drupal-modules</loc><lastmod>2011-04-09T19:52Z</lastmod><changefreq>daily</changefreq></url>
-<url><loc>http://drupal7-systemick.com/content/creating-drupal-content</loc><lastmod>2011-04-09T20:17Z</lastmod><changefreq>daily</changefreq></url>
-<url><loc>http://drupal7-systemick.com/development</loc><lastmod>2011-04-08T11:11Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/php</loc><lastmod>2011-04-08T10:58Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/drupal</loc><lastmod>2011-04-08T11:07Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/javascript</loc><lastmod>2011-04-08T11:11Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
-<url><loc>http://drupal7-systemick.com/accessibility</loc><lastmod>2011-03-18T11:57Z</lastmod><changefreq>monthly</changefreq></url>
-<url><loc>http://drupal7-systemick.com/ecommerce</loc><lastmod>2011-04-08T11:16Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/articles</loc></url>
+<url><loc>http://drupal7-systemick.localhost/php/open-source</loc><lastmod>2012-10-18T09:13Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/consultancy</loc><lastmod>2012-10-18T09:17Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/install-drupal</loc><lastmod>2011-03-22T15:52Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://drupal7-systemick.localhost/create-drupal-theme</loc><lastmod>2011-03-22T15:54Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://drupal7-systemick.localhost/links</loc><lastmod>2011-04-08T10:11Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://drupal7-systemick.localhost/front</loc><lastmod>2012-10-18T09:31Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/content/installing-drupal-modules</loc><lastmod>2011-04-09T19:52Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://drupal7-systemick.localhost/content/creating-drupal-content</loc><lastmod>2011-04-09T20:17Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://drupal7-systemick.localhost/development</loc><lastmod>2012-10-18T08:59Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/php</loc><lastmod>2012-10-18T08:56Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/drupal</loc><lastmod>2012-10-18T08:59Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/javascript</loc><lastmod>2012-10-18T09:03Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://drupal7-systemick.localhost/accessibility</loc><lastmod>2011-03-18T11:57Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://drupal7-systemick.localhost/ecommerce</loc><lastmod>2012-10-18T09:07Z</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
 </urlset>
